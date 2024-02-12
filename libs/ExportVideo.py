@@ -1,4 +1,3 @@
-import os
 from multiprocessing import Pool
 from tqdm import tqdm
 import cv2

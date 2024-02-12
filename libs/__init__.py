@@ -1,4 +1,6 @@
 # Initialisation du package
-from .Home import *
+
+from .ExportVideo import *
+from .HTMLWriter import *
 
 print("Package Import")
