@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Packaging">
-      <change afterPath="$PROJECT_DIR$/config.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/Navigate.py" afterDir="false" />
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Assets">
+      <change afterPath="$PROJECT_DIR$/assets/VideoSquencerIcon.pgm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/VideoSquencerIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,7 @@
     "Python.ExportVideo (1).executor": "Run",
     "Python.ExportVideo.executor": "Run",
     "Python.Home.executor": "Run",
+    "Python.Loader.executor": "Run",
     "Python.MultiProcessTest.executor": "Run",
     "Python.Navigate.executor": "Run",
     "Python.ScriptBase.executor": "Run",
@@ -57,58 +58,6 @@
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\libs" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\Echantillons" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="ExportVideo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="VideoSequence" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/ExportVideo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ExportVideo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="VideoSequence" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\client\Documents\Python Scripts\VideoSquencer\libs\ExportVideo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.ExportVideo" />
-        <item itemvalue="Python.ExportVideo (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -142,12 +91,30 @@
       <option name="project" value="LOCAL" />
       <updated>1707751506858</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Home Page">
+      <option name="closed" value="true" />
+      <created>1707755915943</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707755915943</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Assets">
+      <option name="closed" value="true" />
+      <created>1707835299219</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707835299219</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correction of ExportVideo.py" />
     <MESSAGE value="Packaging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Packaging" />
+    <MESSAGE value="Home Page" />
+    <MESSAGE value="Assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assets" />
   </component>
 </project>
