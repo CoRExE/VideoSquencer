@@ -2,27 +2,13 @@
 <html>
 <head>
   <title> {{ title }} </title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      var cheminDossier = "{{ folder_path }}";
-      $.ajax({
-        url : cheminDossier,
-        success: function (data) {
-          $(data).find("a:contains(.jpg)").each(function() {
-            var nomImage = $(this).attr("href");
-            $("table").append("<tr><td><img src='" + cheminDossier + nomImage + "' alt='" + nomImage + "'></td></tr>");
-          });
-        }
-      });
-    });
-  </script>
 </head>
 <body>
   <table>
     <tr>
       <th> Images </th>
     </tr>
+    {{ images }}
     <!-- Le contenu du tableau sera rempli dynamiquement par le script -->
   </table>
 </body>

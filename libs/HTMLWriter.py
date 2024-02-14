@@ -11,7 +11,7 @@ class HTMLReportWriter:
             os.mkdir(self.folder_path + '/report')
 
         # Read the index.html template
-        with open('template/index.html', 'r') as file:
+        with open('./template/index.html', 'r') as file:
             index_template_content = file.read()
 
         # Create a Jinja2 template object for index.html
@@ -38,7 +38,7 @@ class HTMLReportWriter:
     @staticmethod
     def generate_card(folder):
         # Read the frame_list.html template
-        with open('template/card.html', 'r') as file:
+        with open(r'./template/card.html', 'r') as file:
             card_template_content = file.read()
 
         # Create a Jinja2 template object for frame_list.html
@@ -50,7 +50,7 @@ class HTMLReportWriter:
 
     def generate_list(self, folder):
         # Read the frame_list.html template
-        with open('template/frame_list.html', 'r') as file:
+        with open(r'./template/frame_list.html', 'r') as file:
             frame_list_template_content = file.read()
 
         # Create a Jinja2 template object for frame_list.html

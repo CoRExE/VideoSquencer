@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Resolve Bug&#10;+&#10;HTML Redact part">
-      <change afterPath="$PROJECT_DIR$/libs/template/frame_list.html" afterDir="false" />
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="HTML Redact part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/HTMLWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/HTMLWriter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/libs/template/card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/libs/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/template/frame_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/libs/template/frame_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\Echantillons" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.HTMLWriter">
     <configuration name="HTMLWriter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VideoSequence" />
       <option name="ENV_FILES" value="" />
@@ -112,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.HTMLWriter" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707909039090</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="HTML Redact part 2">
+      <option name="closed" value="true" />
+      <created>1707926238677</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707926238678</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -192,6 +198,7 @@
     <MESSAGE value="Assets" />
     <MESSAGE value="Merge Algorythm part with Graphical part" />
     <MESSAGE value="Resolve Bug&#10;+&#10;HTML Redact part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve Bug&#10;+&#10;HTML Redact part" />
+    <MESSAGE value="HTML Redact part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="HTML Redact part 2" />
   </component>
 </project>
