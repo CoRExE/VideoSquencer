@@ -7,6 +7,9 @@ class HTMLReportWriter:
         self.folder_path = folder_path
 
     def write_report(self, report_name):
+
+        # TODO : Générer le Report Hors dossier et le déplacer une fois fini
+
         if not os.path.exists(self.folder_path + '/report'):
             os.mkdir(self.folder_path + '/report')
 
@@ -49,21 +52,5 @@ class HTMLReportWriter:
                                     folder_dest="frame_list_" + folder.split('/')[-1] + ".html")
 
     def generate_list(self, folder):
-        # Read the frame_list.html template
-        with open(r'./template/frame_list.html', 'r') as file:
-            frame_list_template_content = file.read()
-
-        # Create a Jinja2 template object for frame_list.html
-        frame_list_template = Template(frame_list_template_content)
-
-        # Render the frame_list.html template with the report data
-        frame_list_result = frame_list_template.render(folder_path=folder, title=folder)
-
-        # Write the rendered frame_list.html to the report folder
-        with open(self.folder_path + '/report/frame_list_' + folder.split('/')[-1] + '.html', 'w') as file:
-            file.write(frame_list_result)
-
-
-# Testing #
-essai = HTMLReportWriter(r"C:/Users/client/Documents/Python Scripts/VideoSquencer/Result")
-essai.write_report("test")
+        # TODO : Générer les Listes dans le Report
+        pass
