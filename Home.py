@@ -1,9 +1,7 @@
-import os
-from time import sleep
 from tkinter import *
 from tkinter import ttk
 from libs import *
-import tkinter.messagebox as messagebox
+from tkinter import messagebox, simpledialog
 
 video_extension = ["mp4", "mov", "mkv", "avi", "webm", "mp3", "wav", "flv"]
 
@@ -48,11 +46,15 @@ class Home:
         self.listbox.grid(row=2, column=0, columnspan=2, sticky='w')
 
         # Dest #
-        Label(self.liste_frame, text="Destination", bg=self.root['bg']).grid(row=3, column=0, sticky='w')
+        Label(self.liste_frame, text="Destination", bg=self.root['bg']).grid(row=3, column=0, sticky='w', pady=10)
         self.dest_button = Button(self.liste_frame, text="Select Destination", command=self.select_dest)
-        self.dest_button.grid(row=4, column=0, sticky='w')
+        self.dest_button.grid(row=3, column=1, sticky='e', pady=10)
         self.dest_entry = Entry(self.liste_frame, state="disabled", width=50, justify="center")
         self.dest_entry.grid(row=5, column=0, columnspan=2, sticky='w')
+
+        # Launch #
+        self.launch_button = Button(self.liste_frame, text="Launch", command=self.launch)
+        self.launch_button.grid(row=8, column=0, columnspan=2, pady=10)
 
         # Pack #
         self.path_frame.pack(expand=True, side="left")
@@ -137,9 +139,22 @@ class Home:
 
 
 def run(sources, dest_path, frame_num, num_process):
+    metadata = {}
     for source in sources:
         dest_path_temp = dest_path + "/" + source.split("/")[-1].split(".")[0]
         if not os.path.exists(dest_path_temp):
             os.mkdir(dest_path_temp)
+
+        metadata[source.split("/")[-1].split(".")[0]] = get_metadata(source)
+
         execute(source, dest_path_temp, frame_num, num_process)
-    messagebox.showinfo("Done", "All process are done")
+    messagebox.showinfo("Done", "Extraction process are done")
+
+    report_name = simpledialog.askstring(title="Report name",
+                                         prompt="Give a name to your report",
+                                         initialvalue="My Beatiful Report")
+
+    if report_name == "":
+        report_name = "Hello World Report"
+
+    HTMLReportWriter(dest_path, report_name, metadata).write_report()

@@ -5,14 +5,16 @@ import shutil
 
 
 class HTMLReportWriter:
-    def __init__(self, folder_path):
+    def __init__(self, folder_path, report_name, metadata=None):
         self.folder_path = folder_path
+        self.report_name = report_name
+        self.metadata = metadata
         self.temp_dir = tempfile.mkdtemp()
 
-    def write_report(self, report_name):
+    def write_report(self):
 
-        index_page = Template(open(r'../templates/index.html', 'r').read())
-        index_result = index_page.render(report_name=report_name, content=self.generate_cards())
+        index_page = Template(open(r'templates/index.html', 'r').read())
+        index_result = index_page.render(report_name=self.report_name, content=self.generate_cards())
 
         with open(self.temp_dir + '/index.html', 'w') as f:
             f.write(index_result)
@@ -27,7 +29,7 @@ class HTMLReportWriter:
     def generate_cards(self):
         result = ""
 
-        card_component = Template(open(r'../templates/card.html', 'r').read())
+        card_component = Template(open(r'templates/card.html', 'r').read())
 
         for folder in os.listdir(self.folder_path):
             if os.path.isdir(self.folder_path + '/' + folder):
@@ -37,7 +39,11 @@ class HTMLReportWriter:
 
     def generate_card(self, component, folder):
         return component.render(folder=folder,
-                                number_files=len(os.listdir(self.folder_path + '/' + folder)),
+                                filename=self.metadata[folder]['name'],
+                                filesize=self.metadata[folder]['size'],
+                                last_modified=self.metadata[folder]['modified'],
+                                md5=self.metadata[folder]['md5'],
+                                number_frames=len(os.listdir(self.folder_path + '/' + folder)),
                                 folder_dest=folder + '.html'
                                 )
 
@@ -49,7 +55,7 @@ class HTMLReportWriter:
     def generate_list(self, folder):
         result = ""
 
-        list_component = Template(open(r'../templates/frame_list.html', 'r').read())
+        list_component = Template(open(r'templates/frame_list.html', 'r').read())
 
         compt = 0
         for file in os.listdir(self.folder_path + '/' + folder):
@@ -65,7 +71,3 @@ class HTMLReportWriter:
 
         with open(self.temp_dir + '/' + folder + '.html', 'w') as f:
             f.write(list_component.render(title=folder, images=result))
-
-
-Essai = HTMLReportWriter(r"C:/Users/client/Documents/Python Scripts/VideoSquencer/Result")
-Essai.write_report("000 Report")

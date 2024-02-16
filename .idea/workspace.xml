@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="TODO Added">
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Correction d'Affichage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/ExportVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/ExportVideo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/HTMLWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/HTMLWriter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/template/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/template/frame_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frame_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/MD5 Sign.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Metadata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/card.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,57 +39,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.ExportVideo (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.ExportVideo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HTMLWriter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Home.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Loader.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MultiProcessTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Navigate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ScriptBase.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TryCode.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.ExportVideo (1).executor": "Run",
+    "Python.ExportVideo.executor": "Run",
+    "Python.HTMLWriter.executor": "Run",
+    "Python.Home.executor": "Run",
+    "Python.Loader.executor": "Run",
+    "Python.MultiProcessTest.executor": "Run",
+    "Python.Navigate.executor": "Run",
+    "Python.ScriptBase.executor": "Run",
+    "Python.TryCode.executor": "Run",
+    "Python.essai.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\libs" />
+      <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\template" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\libs" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\Echantillons" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.HTMLWriter">
-    <configuration name="HTMLWriter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="VideoSequence" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/HTMLWriter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VideoSequence" />
       <option name="ENV_FILES" value="" />
@@ -113,7 +93,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.HTMLWriter" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -206,7 +185,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707991095707</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="HTMLWriter.py Recode">
+      <option name="closed" value="true" />
+      <created>1708092734016</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708092734016</updated>
+    </task>
+    <task id="LOCAL-00011" summary="MD5 Feature">
+      <option name="closed" value="true" />
+      <created>1708095988906</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708095988906</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Correction d'Affichage">
+      <option name="closed" value="true" />
+      <created>1708096958749</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708096958749</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -220,6 +223,9 @@
     <MESSAGE value="HTML Redact part 2" />
     <MESSAGE value="Refont of list_frame" />
     <MESSAGE value="TODO Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="TODO Added" />
+    <MESSAGE value="HTMLWriter.py Recode" />
+    <MESSAGE value="MD5 Feature" />
+    <MESSAGE value="Correction d'Affichage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction d'Affichage" />
   </component>
 </project>
