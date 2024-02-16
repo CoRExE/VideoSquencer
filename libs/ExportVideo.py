@@ -11,7 +11,7 @@ def extract_frames(video_path, output_path, start_frame, end_frame):
         ret, frame = cap.read()
         if not ret:
             break
-        cv2.imwrite(f'{output_path}/frame{i}.jpg', frame)
+        cv2.imwrite(f'{output_path}/frame{"%06d" % i}.jpg', frame)
 
     cap.release()
 

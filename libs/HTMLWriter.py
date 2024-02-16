@@ -1,56 +1,71 @@
 import os
 from jinja2 import Template
+import tempfile
+import shutil
 
 
 class HTMLReportWriter:
     def __init__(self, folder_path):
         self.folder_path = folder_path
+        self.temp_dir = tempfile.mkdtemp()
 
     def write_report(self, report_name):
 
-        # TODO : Générer le Report Hors dossier et le déplacer une fois fini
+        index_page = Template(open(r'../templates/index.html', 'r').read())
+        index_result = index_page.render(report_name=report_name, content=self.generate_cards())
 
-        if not os.path.exists(self.folder_path + '/report'):
-            os.mkdir(self.folder_path + '/report')
+        with open(self.temp_dir + '/index.html', 'w') as f:
+            f.write(index_result)
 
-        # Read the index.html template
-        with open('./template/index.html', 'r') as file:
-            index_template_content = file.read()
+        self.generate_lists(self.folder_path)
 
-        # Create a Jinja2 template object for index.html
-        index_template = Template(index_template_content)
+        for file in os.listdir(self.temp_dir):
+            shutil.move(self.temp_dir + '/' + file, self.folder_path + '/' + file)
 
-        # Render the index.html template with the report data
-        index_result = index_template.render(report_name=report_name, content=self.generate_cards(self.folder_path))
+        shutil.rmtree(self.temp_dir)
 
-        # Write the rendered index.html to the report folder
-        with open(self.folder_path + '/report/index.html', 'w') as file:
-            file.write(index_result)
+    def generate_cards(self):
+        result = ""
 
-    def generate_cards(self, folder_path):
-        content = ""
+        card_component = Template(open(r'../templates/card.html', 'r').read())
 
-        for nom_fichier in os.listdir(folder_path):
-            chemin_fichier = folder_path + '/' + nom_fichier
-            if os.path.isdir(chemin_fichier):
-                content += self.generate_card(chemin_fichier)
-                self.generate_list(chemin_fichier)
+        for folder in os.listdir(self.folder_path):
+            if os.path.isdir(self.folder_path + '/' + folder):
+                result += self.generate_card(card_component, folder)
 
-        return content
+        return result
 
-    @staticmethod
-    def generate_card(folder):
-        # Read the frame_list.html template
-        with open(r'./template/card.html', 'r') as file:
-            card_template_content = file.read()
+    def generate_card(self, component, folder):
+        return component.render(folder=folder,
+                                number_files=len(os.listdir(self.folder_path + '/' + folder)),
+                                folder_dest=folder + '.html'
+                                )
 
-        # Create a Jinja2 template object for frame_list.html
-        card_template = Template(card_template_content)
-
-        # Render the frame_list.html template with the report data
-        return card_template.render(folder=folder, number_files=len(os.listdir(folder)),
-                                    folder_dest="frame_list_" + folder.split('/')[-1] + ".html")
+    def generate_lists(self, folder):
+        for unfolder in os.listdir(folder):
+            if os.path.isdir(folder + '/' + unfolder):
+                self.generate_list(unfolder)
 
     def generate_list(self, folder):
-        # TODO : Générer les Listes dans le Report
-        pass
+        result = ""
+
+        list_component = Template(open(r'../templates/frame_list.html', 'r').read())
+
+        compt = 0
+        for file in os.listdir(self.folder_path + '/' + folder):
+            if file.endswith(".jpg") or file.endswith(".png"):
+                if compt == 5:
+                    result += "</tr>\n<tr>"
+                    compt = 0
+                else:
+                    result += ("<td><img src='" + folder + "/" + file + "'>" +
+                               "<a href='" + folder + "/" + file + "' target='_blank'>" + file + "</a>" + "</td>\n")
+                    compt += 1
+        result += "</tr>"
+
+        with open(self.temp_dir + '/' + folder + '.html', 'w') as f:
+            f.write(list_component.render(title=folder, images=result))
+
+
+Essai = HTMLReportWriter(r"C:/Users/client/Documents/Python Scripts/VideoSquencer/Result")
+Essai.write_report("000 Report")

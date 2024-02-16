@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> {{ title }} </title>
+  <style>
+    #container {
+      width: 100%;
+      overflow-x: auto; /* Allows scrolling if the table is wider than the screen */
+    }
+
+    #container table {
+      width: 100%;
+      border-collapse: collapse; /* Collapses the border between cells */
+    }
+
+    #container th,
+    #container td {
+      border: 1px solid #ddd; /* Adds a border to header and cell elements */
+      padding: 8px; /* Adds some padding inside the cells */
+      text-align: center; /* Centers the text horizontally */
+    }
+
+    #container th {
+      background-color: #f2f2f2; /* Light grey background for the header */
+      font-weight: bold; /* Makes the header text bold */
+    }
+
+    #container img {
+      width: auto; /* Maintains the image aspect ratio */
+      height: 100px; /* Sets a uniform height for all images */
+      display: block; /* Block display to remove bottom space under images */
+      margin-left: auto; /* Centers the image horizontally in the cell */
+      margin-right: auto;
+    }
+
+    /* Optional: Styles to improve the table's appearance on smaller screens */
+    @media screen and (max-width: 600px) {
+      #container td, #container th {
+        padding: 4px; /* Reduces padding on small screens */
+      }
+      #container img {
+        height: 50px; /* Reduces image size on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1> {{ title }} </h1>
+  <div id="container">
+  <table>
+    <tr>
+      {{ images }}
+    <!-- Le contenu du tableau sera rempli dynamiquement par le script -->
+    </tr>
+  </table>
+  </div>
+</body>
+</html>

@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Refont of list_frame">
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="TODO Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/ExportVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/ExportVideo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/HTMLWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/HTMLWriter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/template/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/template/frame_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frame_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +59,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\libs" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\template" />
-      <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\libs" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\Echantillons" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.HTMLWriter">
     <configuration name="HTMLWriter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="VideoSequence" />
       <option name="ENV_FILES" value="" />
@@ -109,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.HTMLWriter" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707927465716</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="TODO Added">
+      <option name="closed" value="true" />
+      <created>1707991095707</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707991095707</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -207,6 +219,7 @@
     <MESSAGE value="Resolve Bug&#10;+&#10;HTML Redact part" />
     <MESSAGE value="HTML Redact part 2" />
     <MESSAGE value="Refont of list_frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refont of list_frame" />
+    <MESSAGE value="TODO Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO Added" />
   </component>
 </project>
