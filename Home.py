@@ -28,37 +28,33 @@ class Home:
         self.liste_frame = Frame(self.window, bg=self.root['bg'])
 
         # Options #
-        Label(self.path_frame, text="Frames", bg=self.root['bg']).pack(side="top")
+        Label(self.path_frame, text="Frames", bg=self.root['bg']).grid(row=0, column=0, sticky='w')
         self.frame_menu = ttk.Combobox(self.path_frame, state="readonly", width=10,
                                        values=["25", "50", "75", "100", "all"])
-        self.frame_menu.pack(side="top", expand=True)
+        self.frame_menu.grid(row=1, column=0, sticky='w')
 
-        Label(self.path_frame, text="Number of process", bg=self.root['bg']).pack(side="bottom")
+        Label(self.path_frame, text="Number of process", bg=self.root['bg']).grid(row=2, column=0, sticky='w')
         self.spin_process = Spinbox(self.path_frame, from_=1, to=process_num, width=10, state="readonly")
-        self.spin_process.pack(side="bottom", expand=True)
-
-        Button(self.root, text="Launch", command=self.launch).pack(side="bottom")
+        self.spin_process.grid(row=3, column=0, sticky='w')
 
         # Source #
         self.source_button = Button(self.liste_frame, text="Select Source", command=self.select_source)
+        self.source_button.grid(row=0, column=0, sticky='w')
         self.folder_button = Button(self.liste_frame, text="Select Folder", command=self.select_folder)
-        Label(self.liste_frame, text="Fichier(s)", bg=self.root['bg']).pack(side="top")
+        self.folder_button.grid(row=0, column=1, sticky='e')
+        Label(self.liste_frame, text="Fichier(s)", bg=self.root['bg']).grid(row=1, column=0, sticky='w')
         self.listbox = Listbox(self.liste_frame, activestyle="dotbox", bg="lightgrey", fg="black", width=50,
                                state="disabled")
-        Button(self.liste_frame, text="Clear List", command=self.clear_listebox).pack(side="bottom", expand=True)
+        self.listbox.grid(row=2, column=0, columnspan=2, sticky='w')
 
         # Dest #
-        Label(self.liste_frame, text="Destination", bg=self.root['bg']).pack(side="bottom")
+        Label(self.liste_frame, text="Destination", bg=self.root['bg']).grid(row=3, column=0, sticky='w')
         self.dest_button = Button(self.liste_frame, text="Select Destination", command=self.select_dest)
+        self.dest_button.grid(row=4, column=0, sticky='w')
         self.dest_entry = Entry(self.liste_frame, state="disabled", width=50, justify="center")
+        self.dest_entry.grid(row=5, column=0, columnspan=2, sticky='w')
 
         # Pack #
-        self.source_button.pack(side="left")
-        self.folder_button.pack(side="right")
-        self.listbox.pack(fill="both", expand=True)
-        self.dest_entry.pack(side="bottom")
-        self.dest_button.pack(side="bottom")
-
         self.path_frame.pack(expand=True, side="left")
         self.liste_frame.pack(expand=True, side="right")
         self.window.pack(expand=True, fill='both')
