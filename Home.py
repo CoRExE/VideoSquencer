@@ -40,6 +40,8 @@ class Home:
         self.source_button.grid(row=0, column=0, sticky='w')
         self.folder_button = Button(self.liste_frame, text="Select Folder", command=self.select_folder)
         self.folder_button.grid(row=0, column=1, sticky='e')
+        self.clear_button = Button(self.liste_frame, text="Clear", command=self.clear_listebox)
+        self.clear_button.grid(row=0, column=2, sticky='e')
         Label(self.liste_frame, text="Fichier(s)", bg=self.root['bg']).grid(row=1, column=0, sticky='w')
         self.listbox = Listbox(self.liste_frame, activestyle="dotbox", bg="lightgrey", fg="black", width=50,
                                state="disabled")

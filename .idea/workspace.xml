@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Correction d'Affichage">
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/ExportVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/ExportVideo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/HTMLWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/HTMLWriter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/MD5 Sign.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Result/.gitkeep" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,26 +35,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.ExportVideo (1).executor": "Run",
-    "Python.ExportVideo.executor": "Run",
-    "Python.HTMLWriter.executor": "Run",
-    "Python.Home.executor": "Run",
-    "Python.Loader.executor": "Run",
-    "Python.MultiProcessTest.executor": "Run",
-    "Python.Navigate.executor": "Run",
-    "Python.ScriptBase.executor": "Run",
-    "Python.TryCode.executor": "Run",
-    "Python.essai.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.ExportVideo (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.ExportVideo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HTMLWriter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Home.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Loader.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MultiProcessTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Navigate.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ScriptBase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TryCode.executor&quot;: &quot;Run&quot;,
+    &quot;Python.essai.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\libs" />
