@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Template Update (previous and next + metadata on List)">
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Report Name Edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/HTMLWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/HTMLWriter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/Metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Metadata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/card.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708965202130</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Report Name Edit">
+      <option name="closed" value="true" />
+      <created>1708965277593</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1708965277593</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -306,6 +316,7 @@
     <MESSAGE value="Setup and Running Correction" />
     <MESSAGE value="Setup and Running Correction Again" />
     <MESSAGE value="Template Update (previous and next + metadata on List)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Template Update (previous and next + metadata on List)" />
+    <MESSAGE value="Report Name Edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Report Name Edit" />
   </component>
 </project>
