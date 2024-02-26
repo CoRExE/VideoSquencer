@@ -1,3 +1,5 @@
+@echo off
+
 echo "If the next command line crash, check your Python Installation"
 
 timeout 3
@@ -14,6 +16,4 @@ echo "Requirement Installed"
 
 timeout 3
 
-attrib -h Run.bat
-
-copy Run.bat ../
+copy Run.bat ..\Run.bat
