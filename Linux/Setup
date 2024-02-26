@@ -7,4 +7,4 @@ echo "Requirement Installed"
 sleep 3
 
 chmod +x run
-mv run ../.
+cp run ../.
