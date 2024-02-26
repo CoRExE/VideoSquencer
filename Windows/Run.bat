@@ -1,0 +1,2 @@
+powershell
+python ../main.py

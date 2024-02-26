@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="User Manual and Scripts Installation">
-      <change afterPath="$PROJECT_DIR$/Setup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Setup.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Video Squencer - User Manual EN.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Video Squencer - User Manual FR.pdf" afterDir="false" />
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="FR Manual Corrupt">
+      <change afterPath="$PROJECT_DIR$/Linux/Run" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Windows/Run.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setup" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/Setup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/Setup.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +59,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\Linux" />
+      <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\Windows" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\libs" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer" />
       <recent name="C:\Users\client\Documents\Python Scripts\VideoSquencer\template" />
-      <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\libs" />
-      <recent name="C:\Users\client\Documents\Python Scripts\VideoSequence\Echantillons" />
     </key>
   </component>
   <component name="RunManager">
@@ -223,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708945156891</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="FR Manual Corrupt">
+      <option name="closed" value="true" />
+      <created>1708945250103</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708945250103</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -256,6 +264,7 @@
     <MESSAGE value="Correction d'Affichage" />
     <MESSAGE value="Présentation du Projet" />
     <MESSAGE value="User Manual and Scripts Installation" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Manual and Scripts Installation" />
+    <MESSAGE value="FR Manual Corrupt" />
+    <option name="LAST_COMMIT_MESSAGE" value="FR Manual Corrupt" />
   </component>
 </project>

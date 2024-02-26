@@ -1,0 +1,4 @@
+#!/bin/bash
+python -V
+sleep 5
+python ../main.py
