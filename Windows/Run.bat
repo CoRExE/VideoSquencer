@@ -1,2 +1,1 @@
-powershell
-python ../main.py
+python main.py

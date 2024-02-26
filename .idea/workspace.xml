@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="FR Manual Corrupt">
-      <change afterPath="$PROJECT_DIR$/Linux/Run" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Windows/Run.bat" afterDir="false" />
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Setup and Running">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Setup" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/Setup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/Setup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Linux/Run" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/Run" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Linux/Setup" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/Setup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/Run.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/Run.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/Setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/Setup.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708945250103</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Setup and Running">
+      <option name="closed" value="true" />
+      <created>1708953775950</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708953775950</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -265,6 +273,7 @@
     <MESSAGE value="Présentation du Projet" />
     <MESSAGE value="User Manual and Scripts Installation" />
     <MESSAGE value="FR Manual Corrupt" />
-    <option name="LAST_COMMIT_MESSAGE" value="FR Manual Corrupt" />
+    <MESSAGE value="Setup and Running" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup and Running" />
   </component>
 </project>
