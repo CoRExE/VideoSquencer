@@ -154,7 +154,7 @@ def run(sources, dest_path, frame_num, num_process):
 
     report_name = simpledialog.askstring(title="Report name",
                                          prompt="Give a name to your report",
-                                         initialvalue="My Beatiful Report")
+                                         initialvalue=f"{dest_path.split('/')[-1]} Report")
 
     if report_name == "":
         report_name = "Hello World Report"
