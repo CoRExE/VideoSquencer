@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Setup and Running Correction">
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Setup and Running Correction Again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Windows/Run.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/Run.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Windows/Setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/Setup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/HTMLWriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/HTMLWriter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/Metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Metadata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frame_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frame_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708955149533</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Setup and Running Correction Again">
+      <option name="closed" value="true" />
+      <created>1708955831955</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708955831955</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -289,6 +299,7 @@
     <MESSAGE value="FR Manual Corrupt" />
     <MESSAGE value="Setup and Running" />
     <MESSAGE value="Setup and Running Correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup and Running Correction" />
+    <MESSAGE value="Setup and Running Correction Again" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup and Running Correction Again" />
   </component>
 </project>

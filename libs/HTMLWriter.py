@@ -48,11 +48,14 @@ class HTMLReportWriter:
                                 )
 
     def generate_lists(self, folder):
+        folders = []
         for unfolder in os.listdir(folder):
             if os.path.isdir(folder + '/' + unfolder):
-                self.generate_list(unfolder)
+                folders.append(unfolder)
+        for pos in range(len(folders)):
+            self.generate_list(folders[pos], folders, pos)
 
-    def generate_list(self, folder):
+    def generate_list(self, folder, folders, pos):
         result = ""
 
         list_component = Template(open(r'templates/frame_list.html', 'r').read())
@@ -69,5 +72,20 @@ class HTMLReportWriter:
                     compt += 1
         result += "</tr>"
 
+        details = (f"<h6 class='card-subtitle mb-2 text-muted'>Nom du fichier : {self.metadata[folder]['name']}</h6>\n" +
+                   f"<p class='card-text'>Taille : {self.metadata[folder]['size']} octets</p>\n" +
+                   f"<p class='card-text'>Dernière modification : {self.metadata[folder]['modified']}</p>\n" +
+                   f"<p class='card-text'>MD5 : {self.metadata[folder]['md5']}</p>\n" +
+                   f"<p class='card-text'> Nombre d'images : {len(os.listdir(self.folder_path + '/' + folder))}</p>\n")
+
+        nav = ""
+        if 0 < pos < len(folders) - 1:
+            nav += "<a href='" + folders[pos - 1] + ".html'>" + "Précédent" + "</a>\n"
+            nav += "<a href='" + folders[pos + 1] + ".html'>" + "Suivant" + "</a>\n"
+        elif pos == 0 and len(folders) > 1:
+            nav += "<a href='" + folders[pos + 1] + ".html'>" + "Suivant" + "</a>\n"
+        elif pos == len(folders) - 1 and len(folders) > 1:
+            nav += "<a href='" + folders[pos - 1] + ".html'>" + "Précédent" + "</a>\n"
+
         with open(self.temp_dir + '/' + folder + '.html', 'w') as f:
-            f.write(list_component.render(title=folder, images=result))
+            f.write(list_component.render(title=folder, images=result, navigation=nav, details=details))
