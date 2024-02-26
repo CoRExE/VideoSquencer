@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="">
+    <list default="true" id="18224603-81d7-475d-b703-2c27b64877fc" name="Changes" comment="Présentation du Projet">
+      <change afterPath="$PROJECT_DIR$/Setup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Setup.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,8 +205,19 @@
       <option name="project" value="LOCAL" />
       <updated>1708096958749</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Présentation du Projet">
+      <option name="closed" value="true" />
+      <created>1708942507447</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708942507447</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -231,6 +244,7 @@
     <MESSAGE value="HTMLWriter.py Recode" />
     <MESSAGE value="MD5 Feature" />
     <MESSAGE value="Correction d'Affichage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction d'Affichage" />
+    <MESSAGE value="Présentation du Projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Présentation du Projet" />
   </component>
 </project>
