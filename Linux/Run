@@ -1,4 +1,7 @@
 #!/bin/bash
+
+git pull
+
 python -V
 sleep 5
 python main.py
