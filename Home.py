@@ -3,7 +3,7 @@ from tkinter import ttk
 from libs import *
 from tkinter import messagebox, simpledialog
 
-video_extension = ["mp4", "mov", "mkv", "avi", "webm", "mp3", "wav", "flv", "m4a"]
+video_extension = ["mp4", "mov", "mkv", "avi", "webm", "mp3", "wav", "flv"]
 
 process_num = os.cpu_count()
 sources_path = []
