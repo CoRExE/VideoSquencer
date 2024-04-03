@@ -33,7 +33,9 @@ def execute(input_path, output_path, num_frames, num_processes):
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     cap.release()
 
-    if num_frames == 'all':
+    if total_frames == 0:
+        return
+    elif num_frames == 'all':
         frames_to_process = total_frames
     else:
         frames_to_process = num_frames
