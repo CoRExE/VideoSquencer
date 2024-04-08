@@ -3,7 +3,7 @@ from tkinter import ttk
 from libs import *
 from tkinter import messagebox, simpledialog
 
-video_extension = ["mp4", "avi", "webm", "mov", "mkv"]
+video_extension = ["mp4", "avi", "webm", "mov", "mkv", "wmv", "flv", "divx", "xvid", "3gp", "mpg", "mpeg", "ts"]
 
 process_num = os.cpu_count()
 sources_path = []
@@ -143,11 +143,11 @@ class Home:
 def run(sources, dest_path, frame_num, num_process):
     metadata = {}
     for source in sources:
-        dest_path_temp = dest_path + "/" + source.split("/")[-1].split(".")[0]
+        dest_path_temp = dest_path + "/" + source.split("/")[-1]
         if not os.path.exists(dest_path_temp):
             os.mkdir(dest_path_temp)
 
-        metadata[source.split("/")[-1].split(".")[0]] = get_metadata(source)
+        metadata[source.split("/")[-1]] = get_metadata(source)
 
         execute(source, dest_path_temp, frame_num, num_process)
     messagebox.showinfo("Done", "Extraction process are done")
