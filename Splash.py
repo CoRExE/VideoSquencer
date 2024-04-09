@@ -1,5 +1,5 @@
-from tkinter import Tk, Label
-from PIL import Image
+from tkinter import Label
+from PIL import Image, ImageTk
 
 
 class SplashScreen:
