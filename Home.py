@@ -1,3 +1,4 @@
+import sys, os
 from tkinter import ttk
 from libs import *
 from tkinter import messagebox, simpledialog
