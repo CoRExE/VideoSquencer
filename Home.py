@@ -168,4 +168,5 @@ def run(sources, dest_path, frame_num, num_process):
         report_name = "Hello World Report"
 
     HTMLReportWriter(dest_path, report_name, metadata).write_report()
-    os.system(f'explorer \"{dest_path}\"')
+    opening_folder = dest_path.replace("/", "\\")
+    os.system(f'explorer \"{opening_folder}\"')
