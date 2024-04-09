@@ -18,7 +18,9 @@ dest_path = ""
 # # # Interface # # #
 class Home:
     def __init__(self):
-        SplashScreen(tk.Tk().mainloop())
+        splash = tk.Tk()
+        SplashScreen(splash)
+        splash.mainloop()
         self.root = tk.Tk()
         self.root.title("VideoSquencer")
         self.root.geometry("720x480")
