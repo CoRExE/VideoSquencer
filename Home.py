@@ -18,7 +18,7 @@ class Home:
         self.root.title("VideoSquencer")
         self.root.geometry("720x480")
         self.root.minsize(480, 320)
-        self.root.iconbitmap(r"./assets/VideoSquencerIcon.ico")
+        self.root.iconbitmap(resource("./assets/VideoSquencerIcon.ico"))
         self.root.config(bg='#856ff8')
 
         # Frames #
@@ -139,6 +139,14 @@ class Home:
         self.root.withdraw()
         run(all_sources, self.dest_entry.get(), frame_num, num_process)
         self.root.deiconify()
+
+
+def resource(relative_path):
+    base_path = getattr(
+        sys,
+        '_MEIPASS',
+        os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
 
 
 def run(sources, dest_path, frame_num, num_process):

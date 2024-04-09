@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import Image, ImageTk
+from Home import resource
 
 
 class SplashScreen:
@@ -9,7 +10,7 @@ class SplashScreen:
         self.master.geometry('500x500+300+300')  # Set the window size and position
 
         # Load the image
-        self.image = Image.open(r"./assets/VideoSquencerIconResized.png")
+        self.image = Image.open(resource("./assets/VideoSquencerIconResized.png"))
         self.photo_image = ImageTk.PhotoImage(self.image)
 
         # Create a label and add the image to it

@@ -3,6 +3,8 @@ from jinja2 import Template
 import tempfile
 import shutil
 
+from Home import resource
+
 
 class HTMLReportWriter:
     def __init__(self, folder_path, report_name, metadata=None):
@@ -13,7 +15,7 @@ class HTMLReportWriter:
 
     def write_report(self):
 
-        index_page = Template(open(r'templates/index.html', 'r').read())
+        index_page = Template(open(resource('templates/index.html'), 'r').read())
         index_result = index_page.render(report_name=self.report_name, content=self.generate_cards())
 
         with open(self.temp_dir + '/index.html', 'w') as f:
@@ -29,7 +31,7 @@ class HTMLReportWriter:
     def generate_cards(self):
         result = ""
 
-        card_component = Template(open(r'templates/card.html', 'r').read())
+        card_component = Template(open(resource(r'templates/card.html'), 'r').read())
 
         for folder in os.listdir(self.folder_path):
             if os.path.isdir(self.folder_path + '/' + folder):
@@ -58,7 +60,7 @@ class HTMLReportWriter:
     def generate_list(self, folder, folders, pos):
         result = ""
 
-        list_component = Template(open(r'templates/frame_list.html', 'r').read())
+        list_component = Template(open(resource('templates/frame_list.html'), 'r').read())
 
         compt = 0
         for file in os.listdir(self.folder_path + '/' + folder):
