@@ -2,11 +2,11 @@ import os
 import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
 
-from Splash import SplashScreen
 from libs import execute
 from libs.HTMLWriter import HTMLReportWriter
 from libs.Metadata import get_metadata
 from libs.Navigate import get_file_name, get_directory
+from libs.resource import resource
 
 video_extension = ["mp4", "avi", "webm", "mov", "mkv", "wmv", "flv", "divx", "xvid", "3gp", "mpg", "mpeg", "ts"]
 
@@ -18,6 +18,7 @@ dest_path = ""
 # # # Interface # # #
 class Home:
     def __init__(self):
+        from Splash import SplashScreen
         splash = tk.Tk()
         SplashScreen(splash)
         splash.mainloop()
@@ -52,7 +53,7 @@ class Home:
         self.clear_button.grid(row=0, column=2, sticky='e')
         tk.Label(self.liste_frame, text="Fichier(s)", bg=self.root['bg']).grid(row=1, column=0, sticky='w')
         self.listbox = tk.Listbox(self.liste_frame, activestyle="dotbox", bg="lightgrey", fg="black", width=50,
-                               state="disabled")
+                                  state="disabled")
         self.listbox.grid(row=2, column=0, columnspan=2, sticky='w')
 
         # Dest #
@@ -146,14 +147,6 @@ class Home:
         self.root.withdraw()
         run(all_sources, self.dest_entry.get(), frame_num, num_process)
         self.root.deiconify()
-
-
-def resource(relative_path):
-    base_path = getattr(
-        sys,
-        '_MEIPASS',
-        os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(base_path, relative_path)
 
 
 def run(sources, dest_path, frame_num, num_process):

@@ -3,7 +3,7 @@ from jinja2 import Template
 import tempfile
 import shutil
 
-from Home import resource
+from libs.resource import resource
 
 
 class HTMLReportWriter:
