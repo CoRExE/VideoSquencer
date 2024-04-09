@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Label
 from PIL import Image, ImageTk
 from Home import resource
 
@@ -23,7 +23,3 @@ class SplashScreen:
     def close_splash(self):
         self.master.destroy()
 
-
-splash_root = Tk()
-splash = SplashScreen(splash_root)
-splash_root.mainloop()

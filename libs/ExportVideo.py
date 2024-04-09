@@ -1,6 +1,6 @@
 import random
-from multiprocessing import Pool
 import cv2
+from multiprocessing import Pool
 
 
 def extract_frames(video_path, output_path, start_frame, end_frame):

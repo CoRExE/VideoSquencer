@@ -1,8 +1,12 @@
-import sys, os
-from tkinter import ttk
-from libs import *
-from tkinter import messagebox, simpledialog
-from Splash import *
+import os
+import tkinter as tk
+from tkinter import ttk, messagebox, simpledialog
+
+from Splash import SplashScreen
+from libs import execute
+from libs.HTMLWriter import HTMLReportWriter
+from libs.Metadata import get_metadata
+from libs.Navigate import get_file_name, get_directory
 
 video_extension = ["mp4", "avi", "webm", "mov", "mkv", "wmv", "flv", "divx", "xvid", "3gp", "mpg", "mpeg", "ts"]
 
@@ -14,7 +18,10 @@ dest_path = ""
 # # # Interface # # #
 class Home:
     def __init__(self):
-        self.root = Tk()
+        splash = tk.Tk()
+        SplashScreen(splash)
+        splash.mainloop()
+        self.root = tk.Tk()
         self.root.title("VideoSquencer")
         self.root.geometry("720x480")
         self.root.minsize(480, 320)
@@ -22,41 +29,41 @@ class Home:
         self.root.config(bg='#856ff8')
 
         # Frames #
-        self.window = Frame(self.root, cursor="crosshair", bg=self.root['bg'])
-        self.path_frame = Frame(self.window, bg=self.root['bg'])
-        self.liste_frame = Frame(self.window, bg=self.root['bg'])
+        self.window = tk.Frame(self.root, cursor="crosshair", bg=self.root['bg'])
+        self.path_frame = tk.Frame(self.window, bg=self.root['bg'])
+        self.liste_frame = tk.Frame(self.window, bg=self.root['bg'])
 
         # Options #
-        Label(self.path_frame, text="Frames", bg=self.root['bg']).grid(row=0, column=0, sticky='w')
+        tk.Label(self.path_frame, text="Frames", bg=self.root['bg']).grid(row=0, column=0, sticky='w')
         self.frame_menu = ttk.Combobox(self.path_frame, state="readonly", width=10,
                                        values=["25", "50", "75", "100", "all"])
         self.frame_menu.grid(row=1, column=0, sticky='w')
 
-        Label(self.path_frame, text="Number of process", bg=self.root['bg']).grid(row=2, column=0, sticky='w')
-        self.spin_process = Spinbox(self.path_frame, from_=1, to=process_num, width=10, state="readonly")
+        tk.Label(self.path_frame, text="Number of process", bg=self.root['bg']).grid(row=2, column=0, sticky='w')
+        self.spin_process = tk.Spinbox(self.path_frame, from_=1, to=process_num, width=10, state="readonly")
         self.spin_process.grid(row=3, column=0, sticky='w')
 
         # Source #
-        self.source_button = Button(self.liste_frame, text="Select Source", command=self.select_source)
+        self.source_button = tk.Button(self.liste_frame, text="Select Source", command=self.select_source)
         self.source_button.grid(row=0, column=0, sticky='w')
-        self.folder_button = Button(self.liste_frame, text="Select Folder", command=self.select_folder)
+        self.folder_button = tk.Button(self.liste_frame, text="Select Folder", command=self.select_folder)
         self.folder_button.grid(row=0, column=1, sticky='e')
-        self.clear_button = Button(self.liste_frame, text="Clear", command=self.clear_listebox)
+        self.clear_button = tk.Button(self.liste_frame, text="Clear", command=self.clear_listebox)
         self.clear_button.grid(row=0, column=2, sticky='e')
-        Label(self.liste_frame, text="Fichier(s)", bg=self.root['bg']).grid(row=1, column=0, sticky='w')
-        self.listbox = Listbox(self.liste_frame, activestyle="dotbox", bg="lightgrey", fg="black", width=50,
+        tk.Label(self.liste_frame, text="Fichier(s)", bg=self.root['bg']).grid(row=1, column=0, sticky='w')
+        self.listbox = tk.Listbox(self.liste_frame, activestyle="dotbox", bg="lightgrey", fg="black", width=50,
                                state="disabled")
         self.listbox.grid(row=2, column=0, columnspan=2, sticky='w')
 
         # Dest #
-        Label(self.liste_frame, text="Destination", bg=self.root['bg']).grid(row=3, column=0, sticky='w', pady=10)
-        self.dest_button = Button(self.liste_frame, text="Select Destination", command=self.select_dest)
+        tk.Label(self.liste_frame, text="Destination", bg=self.root['bg']).grid(row=3, column=0, sticky='w', pady=10)
+        self.dest_button = tk.Button(self.liste_frame, text="Select Destination", command=self.select_dest)
         self.dest_button.grid(row=3, column=1, sticky='e', pady=10)
-        self.dest_entry = Entry(self.liste_frame, state="disabled", width=50, justify="center")
+        self.dest_entry = tk.Entry(self.liste_frame, state="disabled", width=50, justify="center")
         self.dest_entry.grid(row=5, column=0, columnspan=2, sticky='w')
 
         # Launch #
-        self.launch_button = Button(self.liste_frame, text="Launch", command=self.launch)
+        self.launch_button = tk.Button(self.liste_frame, text="Launch", command=self.launch)
         self.launch_button.grid(row=8, column=0, columnspan=2, pady=10)
 
         # Pack #
