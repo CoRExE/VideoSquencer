@@ -1,7 +1,7 @@
-from tkinter import *
 from tkinter import ttk
 from libs import *
 from tkinter import messagebox, simpledialog
+from Splash import *
 
 video_extension = ["mp4", "avi", "webm", "mov", "mkv", "wmv", "flv", "divx", "xvid", "3gp", "mpg", "mpeg", "ts"]
 
@@ -17,7 +17,7 @@ class Home:
         self.root.title("VideoSquencer")
         self.root.geometry("720x480")
         self.root.minsize(480, 320)
-        self.root.iconbitmap(r"assets/VideoSquencerIcon.ico")
+        self.root.iconbitmap(r"./assets/VideoSquencerIcon.ico")
         self.root.config(bg='#856ff8')
 
         # Frames #
@@ -160,3 +160,4 @@ def run(sources, dest_path, frame_num, num_process):
         report_name = "Hello World Report"
 
     HTMLReportWriter(dest_path, report_name, metadata).write_report()
+    os.system(f'explorer \"{dest_path}\"')

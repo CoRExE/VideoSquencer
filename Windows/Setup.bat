@@ -11,6 +11,8 @@ timeout 5
 pip install -U opencv-python
 pip install -U Jinja2
 pip install -U numpy
+pip install -U pillow
+
 
 echo "Requirement Installed"
 
