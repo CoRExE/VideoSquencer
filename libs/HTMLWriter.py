@@ -73,6 +73,7 @@ class HTMLReportWriter:
         result += "</tr>"
 
         details = (f"<h6 class='card-subtitle mb-2 text-muted'>Nom du fichier : {self.metadata[folder]['name']}</h6>\n" +
+                   f"<p class='card-text'>Chemin : {self.metadata[folder]['path']}</p>\n" +
                    f"<p class='card-text'>Taille : {self.metadata[folder]['size']} MO</p>\n" +
                    f"<p class='card-text'>Dernière modification : {self.metadata[folder]['modified']}</p>\n" +
                    f"<p class='card-text'>MD5 : {self.metadata[folder]['md5']}</p>\n" +

@@ -14,6 +14,7 @@ def get_metadata(file_path):
     metadata = os.stat(file_path)
     return {
         "name": file_path.split("/")[-1],
+        "path": file_path,
         "size": round(metadata.st_size / (1024 * 1024), 2),
         "modified": datetime.datetime.fromtimestamp(metadata.st_mtime),
         "md5": calculate_md5(file_path)
