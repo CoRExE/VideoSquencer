@@ -18,6 +18,10 @@ dest_path = ""
 # # # Interface # # #
 class Home:
     def __init__(self):
+        """
+        Initializes the application window and sets up the necessary frames, labels, buttons, and widgets for the
+        VideoSquencer application.
+        """
         splash = tk.Tk()
         SplashScreen(splash)
         splash.mainloop()
@@ -76,6 +80,11 @@ class Home:
     # Functions #
 
     def select_source(self):
+        """
+        Selects a source file or multiple source files using the get_file_name function.
+        If multiple files are selected, the listbox is configured to display the sources,
+        otherwise, a warning message is shown through a messagebox.
+        """
         result = get_file_name(multiple=True)
         if type(result) == tuple:
             self.listbox.configure(state="normal")
@@ -87,6 +96,9 @@ class Home:
             messagebox.showwarning("File are missing", "No source selected")
 
     def check_source(self):
+        """
+        A function to check the source list in the listbox, filter out video files, and display them.
+        """
         self.listbox.configure(state="normal")
         all_sources = self.listbox.get(0, "end")
         for i, source in enumerate(all_sources):
@@ -101,6 +113,9 @@ class Home:
         self.listbox.configure(state="disabled")
 
     def select_folder(self):
+        """
+        Selects a folder and populates a listbox with video files from that folder.
+        """
         target = get_directory()
         if target != "":
             for chemin_dossier, sous_dossiers, fichiers in os.walk(target):
@@ -120,6 +135,12 @@ class Home:
             messagebox.showwarning("No destination selected", "Please select a Folder -_-")
 
     def select_dest(self):
+        """
+        Selects a destination directory for the file to be saved.
+        Updates the global variable dest_path with the selected directory path.
+        If a directory is selected, updates the destination entry widget accordingly.
+        If no directory is selected, shows a warning message.
+        """
         global dest_path
         result = get_directory()
         if result != "":
@@ -132,12 +153,18 @@ class Home:
             messagebox.showwarning("No destination selected", "Please select a destination :<")
 
     def clear_listebox(self):
+        """
+        Clears the listbox by enabling it, deleting all items, disabling it, and clearing the sources_path list.
+        """
         self.listbox.configure(state="normal")
         self.listbox.delete(0, "end")
         self.listbox.configure(state="disabled")
         sources_path.clear()
 
     def launch(self):
+        """
+        Launches the process with the given sources, destination, frame number, and number of processes.
+        """
         all_sources = self.listbox.get(0, "end")
         frame_num = self.frame_menu.get()
         num_process = int(self.spin_process.get())
@@ -149,6 +176,18 @@ class Home:
 
 
 def run(sources, dest_path, frame_num, num_process):
+    """
+    A function that processes a list of sources, extracts metadata, executes a task, and generates a report.
+
+    Parameters:
+    - sources (list): List of source paths
+    - dest_path (str): Destination path
+    - frame_num (int): Number of frames
+    - num_process (int): Number of processes to run
+
+    Returns:
+    None
+    """
     metadata = {}
     for source in sources:
         dest_path_temp = dest_path + "/" + source.split("/")[-1]
